@@ -35,16 +35,13 @@ public class Ex04 {
     }
 
     public static int[] twoSum(int[] nums, int target) {
-        // 중복되지 않는 하나의 숫자를 출력하는 코드...
-        // 만약? 중복되는 수가 있다면? 그 수를 제외하고 출력하면 되는 원리?
         for (int i = 0; i < nums.length; i++) {
-            int count = 0;
-
-            for (int j = 0; j < nums.length; j++) {
-                if ()
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int [] {i, j};
+                }
             }
         }
-
-
+        return null;
     }
 }
