@@ -1,26 +1,28 @@
-/*
-UP & DOWN 게임 (스윙 이용)
- */
-
 package Ex10;
 
-import javax.swing.*;
+class Cat {
+    private String name;
+    private int age;
 
-public class Ex10 extends JFrame {
-    public Ex10() {
-        setTitle("UP & DOWN Game"); // 창 제목
-        setSize(400, 300); // 창 크기 (가로, 세로)
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        JLabel label = new JLabel();
-        JButton button = new JButton("확인");
-
-        setVisible(true);
+    public Cat() {
+        this.name = "Unknown";
+        this.age = 0;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Ex10  {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new Ex10();
-        });
+        Cat myCat = new Cat();
+
+        System.out.println("이름: " + myCat.getName());
+        System.out.println("나이: " + myCat.getAge());
     }
 }
